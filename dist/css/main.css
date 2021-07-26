@@ -1,0 +1,160 @@
+/* MIXINS RESPONSIVE */
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: black;
+  font-family: 'Kanit', sans-serif;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/* FLEXBOX */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-jc-sb {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.flex-ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-fd-c {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+nav {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+nav ul {
+  min-height: 50vh;
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    width: 93%;
+  }
+}
+
+nav ul li {
+  border-bottom: solid #ffffff .05rem;
+  position: relative;
+  z-index: 10;
+}
+
+nav ul li a {
+  display: block;
+  padding: 4rem 0 2rem 0;
+  z-index: 10;
+}
+
+nav ul li a span {
+  display: block;
+  font-weight: 500;
+  z-index: 10;
+  mix-blend-mode: difference;
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  nav ul li a span {
+    font-size: 2.5rem;
+  }
+}
+
+nav ul li a > img {
+  mix-blend-mode: difference;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  nav ul li a > img {
+    height: 18px;
+  }
+}
+
+.hover-reveal {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+@media (max-width: 768px) {
+  .hover-reveal {
+    width: 220px;
+    height: 300px;
+  }
+}
+
+.hover-reveal img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  -webkit-transition: -webkit-transform .4s ease-out;
+  transition: -webkit-transform .4s ease-out;
+  transition: transform .4s ease-out;
+  transition: transform .4s ease-out, -webkit-transform .4s ease-out;
+}
+/*# sourceMappingURL=main.css.map */
