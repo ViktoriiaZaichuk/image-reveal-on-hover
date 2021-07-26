@@ -1,0 +1,73 @@
+/* MIXINS RESPONSIVE */
+$screen768: 768px;
+
+
+@mixin screen768 {
+  @media (max-width: #{$screen768}) {
+    @content;
+  }
+}
+
+
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: black;
+    font-family: 'Kanit', sans-serif;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+
+/* FLEXBOX */
+.flex {
+    display: flex; 
+
+    &-jc-sb {
+      justify-content: space-between;
+    }
+
+    &-jc-c {
+      justify-content: center;
+    }
+    
+    &-ai-c {
+      align-items: center;
+    }
+
+    
+    &-fd-c {
+        flex-direction: column;
+    }
+
+}
+
+
+
+
+

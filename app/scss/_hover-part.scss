@@ -1,0 +1,68 @@
+nav {
+	min-height: 100vh;
+	overflow: hidden;
+	& ul {
+		min-height: 50vh;
+		width: 60%;
+		@include screen768 {
+			width: 93%;
+		}
+		& li {
+			border-bottom: solid #ffffff .05rem;				
+			position: relative;
+			z-index: 10;
+			& a {
+				display: block;
+				padding: 4rem 0 2rem 0;
+				z-index: 10;
+				& span {
+					display: block;
+					font-weight: 500;
+					z-index: 10;
+					mix-blend-mode: difference;
+					display: inline-block;
+					position: relative;
+					color: white;
+					font-size: 3rem;
+					text-transform: uppercase;
+					@include screen768 {
+						font-size: 2.5rem;
+					}
+				}
+			 	> img {
+					mix-blend-mode: difference;
+					z-index: 10;
+					@include screen768 {
+						height: 18px;
+					}
+				} 
+
+			}
+		}
+	}
+}
+
+.hover-reveal  {
+	position: absolute;
+	width: 300px;
+	height: 400px;
+	top: 50%;
+	left: 50%;
+	pointer-events: none;
+	transform: translate(-50%, -50%);
+    overflow: hidden;
+	opacity: 0;
+	transform: scale(.8);
+	transition: all .5s ease-out;
+	@include screen768 {
+		width: 220px;
+		height: 300px;
+	}
+	& img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+		position: relative;
+		transition: transform .4s ease-out;
+    }
+}
